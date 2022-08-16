@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    margin-top: 100px;
+    border-top: 1px solid #ccc ;
+    align-items: center;
+    justify-content:space-between;
+    small a {
+        text-decoration: none;
+    }
+}
+
+.footer-nav {
+    background-color: transparent !important;
+    padding: 0px !important;
+}
