@@ -7,7 +7,7 @@
     --black: #000;
     --text-color: #333;
     --blue-black: #161d27;
-    --white: #f3f3f4;
+    --white: #fff;
     --yellow: #ffc174;
 
     // Default layout
@@ -68,4 +68,8 @@ $gray-medium-light: #eaeaea;
             color: var(--white);
         }
     }
+}
+
+.max-width {
+    width: 100%;
 }
