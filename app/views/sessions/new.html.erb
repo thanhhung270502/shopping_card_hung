@@ -1,7 +1,7 @@
 <div class="container-sign login">
     <div class="inner-sign-up">
         <h1 class="title" style="padding-bottom: 25px">Login</h1>
-        <%= form_with url: log_in_path do |form| %>
+        <%= form_with(url: log_in_path, scope: :session, local: true)  do |form| %>
         <div class="form-sign-up">
             <div class="form-floating mb-4">
                 <%= form.text_field :email, class: "form-control", placeholder: "nguyenvana@gmail.com" %>
@@ -17,7 +17,7 @@
             </div>
             <div class="mb-5 row">
                 <div class="col-sm-12">
-                    <%= form.submit "LOGIN", class: "btn btn-red-blue max-width"%>
+                    <%= form.submit "LOGIN", class: "btn btn-red-blue max-width btn-border"%>
                 </div>
             </div>
 

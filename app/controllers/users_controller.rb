@@ -11,6 +11,8 @@ class UsersController < ApplicationController
         @user = User.new(user_params) # Not the final implementation!
         if @user.save
             # Handle a successful save.
+            # log_in @user
+            session[:user_id] = @user.id
             # redirect_to @user
             redirect_to root_path, notice: "Successfully created account"
         else

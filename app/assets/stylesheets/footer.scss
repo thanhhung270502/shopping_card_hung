@@ -20,3 +20,23 @@
     padding: 0px !important;
 }
 
+// Header
+.navbar {
+    --bs-navbar-padding-y: 0.65rem;
+}
+.container-fluid {
+    --bs-gutter-x: 3.5rem;
+}
+
+.drop-menu-right {
+    right: 0 !important;
+    left: unset !important;
+}
+
+.nav-avatar {
+    padding: 4px !important;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
