@@ -10,6 +10,9 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 # gem 'bootstrap-sass', '3.4.1'
 gem 'sass-rails'
 
+# Font awesome 
+gem "font-awesome-sass", "~> 6.1.2"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

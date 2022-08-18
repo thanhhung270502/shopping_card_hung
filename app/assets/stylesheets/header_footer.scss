@@ -1,0 +1,118 @@
+.nav-button {
+    li {
+        padding-left: 10px;
+    }
+}
+
+.footer {
+    display: flex;
+    margin-top: 100px;
+    border-top: 1px solid #ccc ;
+    align-items: center;
+    justify-content:space-between;
+    small a {
+        text-decoration: none;
+    }
+}
+
+.footer-nav {
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+
+// Header
+.navbar {
+    --bs-navbar-padding-y: 0.1rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--primary);
+    padding: 0 !important;
+
+    span {
+        color: var(--white);
+    }
+}
+
+.container-fluid {
+    --bs-gutter-x: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+    .nav-li {
+        > a {
+            padding: 0.7rem 3rem !important;
+            margin: 0.1rem 0.2rem;
+            font-size: 1.2rem;
+            color: var(--white) !important;
+        }
+    
+        > a:hover {
+            background-color: rgba($color: #ccc, $alpha: 0.2);
+            border-radius: 10px;
+        }
+    
+        .active {
+            border-bottom: solid 2px var(--primary);
+            color: var(--primary) !important;
+        }
+    
+        .active:hover {
+            background-color: transparent;
+            border-radius: 0;
+        }
+    
+    }
+    .nav-user {
+        > a {
+            color: var(--white) !important;
+            font-size: 1.2rem;
+            padding: 0.7rem 0 !important;
+            margin: 0.1rem 0.2rem;
+        }
+        
+        li {
+            padding: 0 !important;
+        }
+    }
+
+    .nav-avatar {
+        padding: 0.7rem 0 !important;
+        margin: 0.1rem 0.2rem;
+    }
+}
+
+.drop-menu-right {
+    right: 0 !important;
+    left: unset !important;
+}
+
+.nav-avatar {
+    padding: 4px !important;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 80% !important;
+    // left: 2.7rem !important;
+}
+
+@media (max-width: 1023px) {
+    .nav-user {
+        padding: 0 !important;
+    }
+
+    .nav-button {
+        padding: 0 !important;
+    }
+
+
+    .nav-item {
+        text-align: center !important;
+    }
+}
