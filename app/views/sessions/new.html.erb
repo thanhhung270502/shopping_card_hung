@@ -12,6 +12,10 @@
                 <%= form.password_field :password, class: "form-control", placeholder: "Password" %>
                 <%= form.label :password %>
             </div>
+            <%= form.label :remember_me, class: "checkbox inline" do %>
+                <%= form.check_box :remember_me %>
+                <span>Remember me on this computer</span>
+            <% end %>
             <div class="mb-5 row" style="text-align: right">
                 <label for="forgot">Forgot your password?</label>
             </div>
