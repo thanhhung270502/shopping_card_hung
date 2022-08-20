@@ -1,6 +1,11 @@
-<h1>Sample App</h1>
-<p>
-This is the home page for the
-<a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-sample application.
-</p>
+<%= render partial: "partials/header" %>
+
+<div class="container-cus d-flex">
+    <div class="coll col-05"></div>
+    <div class="coll col-90 banner">
+        <%= image_tag 'banner.png', class: "img-fluid" %>
+    </div>
+    <div class="coll col-05"></div>
+</div>
+
+<%= render partial: "partials/footer" %>
