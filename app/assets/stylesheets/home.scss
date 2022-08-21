@@ -14,9 +14,27 @@
     margin-top: 30px;
     text-align: center;
     width: 100%;
-    height: 90vh;
+    // height: 90vh;
 
     img {
         width: 100%;
+    }
+}
+
+// Helper
+.helper__icon {
+    font-size: 2.2rem;
+    color: var(--primary);
+    padding: 0 1rem;
+}
+
+.helper__text-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.text {
+    p {
+        text-align: justify;
     }
 }
