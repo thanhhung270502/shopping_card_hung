@@ -6,7 +6,6 @@
 
 .footer {
     display: flex;
-    margin-top: 100px;
     border-top: 1px solid #ccc ;
     align-items: center;
     justify-content:space-between;
@@ -23,6 +22,7 @@
 // Header
 .navbar {
     --bs-navbar-padding-y: 0.1rem;
+    border-bottom: 1px solid var(--night-light);
 }
 
 .navbar-brand {

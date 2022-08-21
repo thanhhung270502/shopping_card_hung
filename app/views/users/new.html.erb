@@ -1,14 +1,16 @@
 <div class="container-sign sign-up">
     <div class="inner-sign-up">
         <h1 class="title">Sign Up!</h1>
-        <%#= form_with model: @person, url: sign_up_path do |form| %>
-        <%= form_with model: @user, url: sign_up_path do |form| %>
+        
+        <%#= form_with model: @user, url: sign_up_path do |form| %>
+        <%= form_with(model: @user, local: true) do |form|  %>
+        <%#= render 'shared/flash' %>
         <% if @user.errors.any? %>
-            <div class="alert alert-danger">
-                <% @user.errors.full_messages.each do |message| %>
-                    <div><%= message %></div>
-                <% end %>
-            </div>
+        <div class="alert alert-danger">
+            <% @user.errors.full_messages.each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
         <% end %>
         <div class="form-sign-up">
             <div class="mb-1 row">

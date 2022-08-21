@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def show
-        @user = User.find(params[:id])
+        @user = User.find_by(id: params[:id])
     end
     
     def new
@@ -11,12 +11,26 @@ class UsersController < ApplicationController
         @user = User.new(user_params) # Not the final implementation!
         if @user.save
             # Handle a successful save.
-            # log_in @user
-            session[:user_id] = @user.id
+            log_in @user
+            # session[:user_id] = @user.id
             # redirect_to @user
-            redirect_to root_path, notice: "Successfully created account"
+            redirect_to root_path
         else
             render :new
+        end
+    end
+
+    def edit
+        @user = User.find_by(id: params[:id])
+    end        
+
+    def update
+        @user = User.find_by(id: params[:id])
+        if @user.update(user_params)
+            # Handle a successful update.
+            redirect_to @user
+        else
+            render 'edit'
         end
     end
 
