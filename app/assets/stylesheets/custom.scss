@@ -1,0 +1,81 @@
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+@import "font-awesome";
+// Color
+:root {
+    --primary: #fe2c55;
+    --black: #000;
+    --text-color: #333;
+    --blue-black: #161d27;
+    --white: #fff;
+    --night: #242526;
+    --yellow: #ffc174;
+    --night-light: #3A3B3C;
+
+    // Default layout
+    --default-layout-header-height: 160px;
+    --default-layout-width: 140rem;
+    --default-layout-horizontal-spacer: 24px;
+}
+
+.bg-night {
+    background-color: var(--night);
+}
+
+/* universal */
+body {
+    // padding-top: 60px;
+}
+
+/* mixins, variables, etc. */
+$gray-medium-light: #eaeaea;
+@mixin box_sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* miscellaneous */
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
+}
+
+.btn {
+    a {
+        text-decoration: none !important;
+        color: var(--white);
+    }
+    &:hover {
+        a {
+            color: var(--black);
+        }
+    }
+}
+
+.btn-submit {
+    a {
+        color: var(--black) !important;
+    }
+    &:hover {
+        a {
+            color: var(--white) !important;
+        }
+    }
+}
+
+
+.btn-outline-danger {
+    &:hover {
+        a {
+            color: var(--white);
+        }
+    }
+}
+
+.max-width {
+    width: 100%;
+}
