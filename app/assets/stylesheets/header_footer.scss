@@ -95,7 +95,12 @@
 .drop-menu-right {
     right: 0 !important;
     left: unset !important;
-    top: 80% !important
+    top: 80% !important;
+    width: 250px !important;
+
+    li {
+        padding: 0 10px;
+    }
 }
 
 .nav-avatar {
@@ -173,4 +178,18 @@
     .row-menu {
         padding: 0 30px;
     }
+}
+
+
+.dropdown-icon {
+    padding-right: 4px;
+    width: 27px;
+    font-size: 1rem;
+    // text-align: center;
+}
+
+.dropdown-padding {
+    padding: 10px;
+    // margin: 0 5px ;
+    border-radius: 7px;
 }

@@ -29,6 +29,11 @@ module SessionsHelper
         !current_user.nil?
     end
 
+    # Return true if the given is the current user
+    def current_user?(user)
+        user && user == current_user
+    end
+
     # Forgets a persistent session.
     def forget(user)
         user.forget
@@ -44,5 +49,17 @@ module SessionsHelper
         
     def require_user_logged_in!
         redirect_to log_in_path if current_user.nil?
+    end   
+
+    # Redirects to stored location (or to the default)
+    def redirect_back_or(default)
+        redirect_to(session[:forwarding_url] || default)
+        session.delete(:forwarding_url)
     end
+
+    # Stores the URL trying to be accesed.
+    def store_location
+        session[:forwarding_url] = request.original_url if request.get?
+    end
+
 end    
