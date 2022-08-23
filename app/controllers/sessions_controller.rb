@@ -4,6 +4,7 @@
 
 class SessionsController < ApplicationController
     # include SessionsHelper
+    before_action :logged_login_to_root, only: [:new, :create]
     def new
     end
 
@@ -11,10 +12,10 @@ class SessionsController < ApplicationController
         user = User.find_by(email: params[:session][:email])
         if user.present? && user.authenticate(params[:session][:password])
             log_in(user)
-            params[:session][:remember_me] ? remember(user) : forget(user)
-            redirect_to root_path
+            params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+            redirect_back_or user
+            # redirect_to root_path
         else
-            flash[:alert] = "Invalid email or password"
             render :new
         end
 
@@ -35,5 +36,11 @@ class SessionsController < ApplicationController
         # session[:user_id] = nil
         log_out if logged_in?
         redirect_to root_path
+    end
+
+    def logged_login_to_root
+        if logged_in?
+            redirect_to root_path
+        end
     end
 end

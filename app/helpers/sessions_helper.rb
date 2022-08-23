@@ -21,7 +21,7 @@ module SessionsHelper
                 log_in user
                 @current_user = user
             end
-        end
+        end       
     end
 
     # Returns true if the user is logged in, false otherwise.
@@ -60,6 +60,13 @@ module SessionsHelper
     # Stores the URL trying to be accesed.
     def store_location
         session[:forwarding_url] = request.original_url if request.get?
+    end
+
+    def logged_in_user
+        unless logged_in?
+            store_location
+            redirect_to log_in_path
+        end
     end
 
 end    
