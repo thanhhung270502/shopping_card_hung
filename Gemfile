@@ -16,7 +16,8 @@ gem "font-awesome-sass", "~> 6.1.2"
 # Faker & Pagination
 # gem 'faker', '2.1.2'
 gem 'will_paginate', '3.3'
-gem 'bootstrap-will_paginate', '1.0.0'
+# gem 'bootstrap-will_paginate', '1.0.0'
+gem 'will_paginate-bootstrap4' 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -66,6 +67,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'pry', '~> 0.14.1'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
