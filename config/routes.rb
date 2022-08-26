@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   get 'static_pages/contact'
   get 'static_pages/setting'
+  get 'static_pages/product'
+  get 'product', to: 'main#product'
 
   get 'sign_up', to: 'users#new'
   post 'sign_up', to: 'users#create'
