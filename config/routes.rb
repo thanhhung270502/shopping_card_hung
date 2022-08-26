@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # root to: "main#index"
+  # root "main#index"
   root "static_pages#home"
   get 'static_pages/home'
   get 'static_pages/about'
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # patch 'password', to: 'users#update'
 
   resources :users
+  resources :account_activations, only: [:edit]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
