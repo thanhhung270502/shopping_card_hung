@@ -6,4 +6,7 @@ class MainController < ApplicationController
             @user = User.find_by(id: session[:user_id])
         end
     end
+
+    def product
+    end
 end

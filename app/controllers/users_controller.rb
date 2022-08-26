@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find_by(id: params[:id])
+        @microposts = @user.microposts.paginate(page: params[:page])
     end
     
     def new
@@ -15,10 +16,12 @@ class UsersController < ApplicationController
         @user = User.new(user_params) # Not the final implementation!
         if @user.save
             # Handle a successful save.
-            log_in @user
+            @user.send_activation_email
+            flash[:info] = "Please check your email to activate your account."
+            # log_in @user
+            redirect_to root_path
             # session[:user_id] = @user.id
             # redirect_to @user
-            redirect_to root_path
         else
             render :new
         end
