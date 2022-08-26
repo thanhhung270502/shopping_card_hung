@@ -1,12 +1,25 @@
+<%= render partial: "partials/header" %>
+<% if logged_in? %>
+    <div class="row">
+        <aside class="col-md-4">
+            <section class="user_info">
+                <%= render 'shared/user_info' %>
+            </section>
+            <section class="micropost_form">
+                <%= render 'shared/micropost_form' %>
+            </section>
+        </aside>
+    </div>
+<% else %>
+
 <h1>About</h1>
 <p>
-The <a href="https://www.railstutorial.org/"><em>Ruby on Rails
-Tutorial</em></a>, part of the
-<a href="https://www.learnenough.com/">Learn Enough</a> family of
-tutorials, is a
-<a href="https://www.railstutorial.org/book">book</a> and
-<a href="https://screencasts.railstutorial.org/">screencast series</a>
-to teach web development with
-<a href="https://rubyonrails.org/">Ruby on Rails</a>.
-This is the sample app for the tutorial.
+    The <a href="https://www.railstutorial.org/"><em>Ruby on Rails Tutorial</em></a>, part of the
+    <a href="https://www.learnenough.com/">Learn Enough</a> family of tutorials, is a
+    <a href="https://www.railstutorial.org/book">book</a> and
+    <a href="https://screencasts.railstutorial.org/">screencast series</a> to teach web development with
+    <a href="https://rubyonrails.org/">Ruby on Rails</a>.
+    This is the sample app for the tutorial.
 </p>
+
+<% end %>
