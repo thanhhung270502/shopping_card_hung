@@ -78,12 +78,13 @@
               class="nav-link dropdown-toggle nav-avatar" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <ul class="dropdown-menu dropdown-menu-dark drop-menu-right">
                 <li class="">
-                  <%= link_to '<i class="fa-solid fa-address-card dropdown-icon"></i> Xem trang cá nhân'.html_safe, user_path(current_user), class: "dropdown-item dropdown-padding" %>
-                <%# <a class="dropdown-item dropdown-padding" href="#">
-                  <i class="fa-solid fa-address-card dropdown-icon"></i>
-                  Xem trang cá nhân
-                </a> %>
+                  <%= link_to '<i class="fa-solid fa-address-card dropdown-icon"></i> Profile'.html_safe, user_path(current_user), class: "dropdown-item dropdown-padding" %>
                 </li>
+                <% if admin_user? %>
+                  <li>
+                    <%= link_to '<i class="fa-solid fa-users dropdown-icon"></i> All users'.html_safe, users_path , class: "dropdown-item dropdown-padding" %>
+                  </li>
+                <% end %>
                 <li>
                   <hr class="dropdown-divider">
                 </li>

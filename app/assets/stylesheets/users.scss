@@ -77,3 +77,13 @@
     border-radius: 20px;
     padding: 10px 0;
 }
+
+.users__name {
+    text-decoration: none; 
+    color: #fff;
+
+    &:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+}
