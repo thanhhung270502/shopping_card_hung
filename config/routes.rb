@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   get 'static_pages/setting'
   get 'static_pages/product'
+  get 'static_pages/products'
 
   get 'product',    to: 'main#product'
 
@@ -22,10 +23,15 @@ Rails.application.routes.draw do
   # get 'password', to: 'users#edit', as: :edit_password
   # patch 'password', to: 'users#update'
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

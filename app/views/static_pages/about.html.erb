@@ -6,6 +6,9 @@
                 <section class="user_info">
                     <%= render 'shared/user_info' %>
                 </section>
+                <section class="stats">
+                    <%= render 'shared/stats' %>
+                </section>
                 <section class="micropost_form">
                     <%= render 'shared/micropost_form' %>
                 </section>
@@ -16,7 +19,6 @@
             </div>
         </div>
     <% else %>  
-
         <h1>About</h1>
         <p>
             The <a href="https://www.railstutorial.org/"><em>Ruby on Rails Tutorial</em></a>, part of the
@@ -26,6 +28,5 @@
             <a href="https://rubyonrails.org/">Ruby on Rails</a>.
             This is the sample app for the tutorial.
         </p>
-
     <% end %>
 </div>

@@ -1,0 +1,35 @@
+.btn {
+    a {
+        text-decoration: none !important;
+        color: var(--white);
+    }
+    &:hover {
+        a {
+            color: var(--black);
+        }
+    }
+}
+
+.btn-submit {
+    a {
+        color: var(--black) !important;
+    }
+    &:hover {
+        a {
+            color: var(--white) !important;
+        }
+    }
+}
+
+.alert-success {
+    --bs-alert-bg: var(--green);
+}
+
+.alert-warning {
+    --bs-alert-bg: var(--yellow); 
+}
+
+.alert-info {
+    --bs-alert-bg: var(--blue);
+}
+
